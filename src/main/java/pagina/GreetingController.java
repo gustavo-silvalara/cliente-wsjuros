@@ -21,10 +21,10 @@ public class GreetingController {
         float c = Float.valueOf(capital);
         float i = Float.valueOf(juros);
         int t = Integer.parseInt(periodo);
-        JurosWS_Service service = new JurosWS_Service();
-        JurosWS port = service.getJurosWSPort();
-        float resultado = port.juroSimples(c,i,t);
-        model.addAttribute("js", String.valueOf(resultado));
+//        JurosWS_Service service = new JugrosWS_Service();
+//        JurosWS port = service.getJurosWSPort();
+//        float resultado = port.juroSimples(c,i,t);
+//        model.addAttribute("js", String.valueOf(resultado));
         return "jurossimples";
     }
 }
