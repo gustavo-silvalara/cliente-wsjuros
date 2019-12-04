@@ -1,2 +1,2 @@
 cliente-wsjuros
-https://pure-scrubland-92633.herokuapp.com/
+http:/juros.gustavo-lara.codes/
