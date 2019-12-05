@@ -20,7 +20,7 @@ public class JurosCompostoController {
         String js;
         if (c != null && i != null & t != null) {
             Float result = WebServiceCaller.port.juroComposto(c,i,t);
-            js = (result != null) ? String.valueOf(result).replace(".",",") : "";
+            js = (result != null) ? String.format("%.2f",result).replace(".",",") : "";
         } else {
             js = "";
         }
