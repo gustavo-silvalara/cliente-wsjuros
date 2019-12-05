@@ -22,3 +22,15 @@
 .text-cont{
     max-width: 15em;
 }
+
+footer {
+    margin-top: 80px;
+    height: 30vh;
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-image: linear-gradient(white, rgb(180, 180, 180));
+    bottom: 0;
+    position: absolute;
+}
