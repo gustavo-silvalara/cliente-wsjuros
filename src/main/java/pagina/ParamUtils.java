@@ -1,5 +1,8 @@
 package pagina;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class ParamUtils {
 
     public static String validateParam(String param){
@@ -24,6 +27,13 @@ public class ParamUtils {
             r = null;
         }
         return r;
+    }
+
+    public static void validateMultipleParams(String... params) {
+        List<String> paramList = Arrays.asList(params);
+        for (String p : paramList) {
+            p = validateParam(p);
+        }
     }
 
 }

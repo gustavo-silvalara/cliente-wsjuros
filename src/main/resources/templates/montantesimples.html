@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juros WS</title>
+    <link rel="shortcut icon" href="https://fuzati.com/wp-content/uploads/2016/12/Percent-Icon.png" />
+    <link rel="stylesheet" href="../static/css/estilo.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div id="corpo-cabecalho" class="container-fluid">
+        <div id="logo">
+            <a class="nav-link logo" href="/">
+                <div class="d-flex justify-content-center">
+                    <img height="64" width="64" src="https://fuzati.com/wp-content/uploads/2016/12/Percent-Icon.png">
+                </div>
+            </a>
+        </div>
+        <div id="corpo-nav" class="container-fluid sticky-top">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="d-flex w-50 order-0">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse justify-content-center order-2" id="collapsingNavbar">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link navText" href="/">Início</a>
+                        <a class="nav-item nav-link active navText" href="/jurossimples">Juros Simples<span
+                                class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link navText" href="/montantesimples">Montante Simples</a>
+                        <a class="nav-item nav-link navText" href="/juroscomposto">Juros Composto</a>
+                        <a class="nav-item nav-link navText" href="/montantecomposto">Montante Composto</a>
+                    </div>
+                </div>
+                <span class="navbar-text small text-truncate mt-1 w-50 text-right order-1 order-md-last"></span>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <form class="form-calc" action="/montantesimples" method="GET">
+                <div class="form-group">
+                    <label for="inputCapital">Capital</label>
+                    <input name="capital" type="text" class="form-control" id="inputCapital" th:value="${capital}"
+                        placeholder="R$">
+                </div>
+                <div class="form-group">
+                    <label for="inputJuros">Porcentagem</label>
+                    <input name="juros" type="text" class="form-control" id="inputJuros" th:value="${juros}"
+                        placeholder="%">
+                </div>
+                <div class="form-group">
+                    <label for="inputPeriodo">Período</label>
+                    <input name="periodo" type="text" class="form-control" id="inputPeriodo" th:value="${periodo}"
+                        placeholder="Meses">
+                </div>
+                <button type="submit" class="btn btn-primary">Calcular</button>
+                <div class="form-group">
+                    <label for="inputjs">Montante Simples</label>
+                    <input type="text" class="form-control" id="inputJs" th:value="${js}"
+                        placeholder="R$">
+                </div>
+                <span class="navbar-text small text-truncate mt-1 w-50 text-right order-1 order-md-last"></span>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+</html>
