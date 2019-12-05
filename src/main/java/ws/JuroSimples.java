@@ -1,5 +1,5 @@
 
-package wsjuros;
+package ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -7,12 +7,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java de juroComposto complex type.
+ * <p>Classe Java de juroSimples complex type.
  * 
  * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
- * &lt;complexType name="juroComposto">
+ * &lt;complexType name="juroSimples">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -28,12 +28,12 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "juroComposto", propOrder = {
+@XmlType(name = "juroSimples", propOrder = {
     "capital",
     "taxa",
     "periodo"
 })
-public class JuroComposto {
+public class JuroSimples {
 
     protected float capital;
     protected float taxa;
